@@ -1,0 +1,21 @@
+h1, h2 {
+    text-align: center;
+}
+
+div.Buttons {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin-left: 500px;
+}
+
+a {
+    font-size: 25px;
+    margin-left: 15px;
+    size: 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gold;
+} 
