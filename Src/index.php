@@ -1,7 +1,10 @@
-<?php include "../Config/DbContext.php"; ?>
+<?php
+    include "../Config/DbContext.php";
+    session_start();
+?>
 
 <form method="POST">
-<div>
+    <div>
         <label for="Email">Email: </label>
         <input type="text" name="Email"></input><br>
 
