@@ -13,15 +13,12 @@
 
             if (mysqli_query($connectionString, $sql)) {
                 $_SESSION["Username"] = $Username;
-                header("Location: WelcomePage.php");
+                header("Location: Login.php");
             }
             else Echo "Error ". mysqli_error($connectionString);
         }
     }
 
-    // very important for login functionality
-    // $result = $connectionString->query("SELECT Id FROM users WHERE email = 'svilen@email.com'");
-    // var_dump(empty($result));
 ?>
 
 <form method="POST">

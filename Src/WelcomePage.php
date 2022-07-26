@@ -1,8 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION["Username"])){
-    echo "My session username is {$_SESSION["Username"]}";
-    echo "<br>";
     echo "
     <h1> write something funny here so we can have a little bit of a laugh</h1>
     <form method='POST'>
@@ -22,8 +20,3 @@ if (isset($_SESSION["Username"])){
         fclose($fileHandler);
     }
 }
-else{
-    echo "Not logged";
-}
-echo "<br>";
-echo "<a href='index.php'>go back</a>";
