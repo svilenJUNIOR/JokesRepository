@@ -54,5 +54,26 @@ Pythn
             if ($i != $index) echo $input[$i];
         }
     }
-    ModifyString("Python", 4);
+
+/* Write a PHP program to create a new string with the last char added at the front and back of a given string of length 1 or more
+ * Sample Input:
+"Red"
+"Green"
+"1"
+Sample Output:
+dRedd
+nGreenn
+111
+ */
+    function ReplaceChars ($input) {
+        if (empty($input)) return "Invalid input";
+
+        $lastChar = $input[strlen($input) - 1];
+
+        $output = $lastChar . $input . $lastChar;
+
+        return $output;
+    }
+
+    echo ReplaceChars("1");
 ?>
