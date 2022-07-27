@@ -23,5 +23,15 @@
             else Echo "Error ". mysqli_error($connectionString);
         }
     }
+
+    $query = "SELECT text FROM jokes";
+    $result = mysqli_query($connectionString, $query);
+    $jokes = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo "<br>";
+    
+    for ($index = 0; $index < count($jokes);  $index++){
+        print_r($jokes[$index]["text"]);
+        echo "<br>";
+    }
 }
 ?>
