@@ -16,4 +16,43 @@ bool(false)
         if ($Check100 || $Check200) var_dump(true);
         else var_dump(false);
     }
+
+/*Write a PHP program to create a new string where 'if' is added to the front of a given string. If the string already begins with 'if', return the string unchanged.
+Sample Input:
+"if else"
+"else"
+"if"
+Sample Output:
+if else
+if else
+if */
+
+    function CheckString ($string) {
+        $beggins = $string[0] . $string[1];
+        $beggins = strtolower($beggins);
+
+        if ($beggins != "if") return "if " . $string;
+        else return $string;
+    }
+
+/* Write a PHP program to remove the character in a given position of a given string. The given position will be in the range 0..string length -1 inclusive
+ * Sample Input:
+"Python", 1
+"Python", o
+"Python", 4
+Sample Output:
+Pthon
+ython
+Pythn
+ */
+
+    function ModifyString ($input, $index) {
+        if ($index < 0 || $index > strlen($input))
+        return "Invalid index";
+
+        for ($i = 0; $i < strlen($input); $i++){
+            if ($i != $index) echo $input[$i];
+        }
+    }
+    ModifyString("Python", 4);
 ?>
