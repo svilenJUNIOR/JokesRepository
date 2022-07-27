@@ -75,5 +75,35 @@ nGreenn
         return $output;
     }
 
-    echo ReplaceChars("1");
+/* Write a PHP program to count a substring of length 2 appears in a given string and also as the last 2 characters of the string. Do not count the end substring
+Sample Input:
+"abcdsab"
+"abcdabab"
+"abcabdabab"
+"abcabd"
+Sample Output:
+1
+2
+3
+0
+ */
+
+    function CountSubString ($input) {
+        $count = -1;
+        $subString = $input[strlen($input) - 2] . $input[strlen($input) - 1];
+
+        for ($i = 0; $i < strlen($input) - 1; $i++) {
+
+            if ($i + 1 <= strlen($input)) {
+                $pairToCheck = $input[$i] . $input[$i + 1];
+
+                if ($pairToCheck == $subString) $count++;
+            }
+        }
+
+        return $count;
+    }
+
+    
 ?>
+
