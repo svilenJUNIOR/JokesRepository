@@ -104,6 +104,28 @@ Sample Output:
         return $count;
     }
 
-    
-?>
+/* Write a PHP program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere
+ * Sample Input:
+{1,1,2,3,1}
+{1,1,2,4,1}
+{1,1,2,1,2,3}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+ */
 
+    function CheckForSequence ($input) {
+        for ($i = 0; $i < count($input); $i++) {
+
+            if ($i + 2 <= count($input)) {
+                if ($input[$i] == 1 && $input[$i + 1] == 2 && $input[$i + 2] == 3)
+                    return var_dump(true);
+                else 
+                    return var_dump(false);
+            }
+        }
+    }
+
+    echo CheckForSequence([1,1,2,3,1]);
+?>

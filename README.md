@@ -16,3 +16,5 @@ a user with such email exists. Other authentication validations such as:
 3) Checking if a user with such email already exists
 
 Are currently not present, due to the nature of the application. Maybe someday I'll add them.
+
+InterviewTask - Application i had to do for a job interview. Sadly it's finished so it will get only 1 commit
